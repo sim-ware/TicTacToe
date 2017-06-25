@@ -19,16 +19,3 @@ class Board
   end
 
 end
-
-# [[_|_|_],
-# [_|_|_]
-# [_|_|_]
-#
-#
-#   (0..3).each do |i|
-#      @grid << [_|_|_]
-#   end
-#
-# 3.times do
-#    # do work here
-# end

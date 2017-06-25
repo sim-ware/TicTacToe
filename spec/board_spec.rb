@@ -18,21 +18,3 @@ describe Board do
   end
 
 end
-
-# end
-
-# describe '#discounter_a' do
-#   it 'discounts the Price of the First Example' do
-#     x = Order.new
-#     p = Pricer.new
-#     d = Discounter.new
-#     x.clock_number('WNP/SWCL001/010')
-#     x.standard_delivery_companies('Disney', 'Discovery', 'Viacom')
-#     x.express_delivery_companies('Horse & County')
-#     p.pricing(x)
-#     d.discounter_a(x)
-#     d.discounter_b(x)
-#     expect(x.price).to eq 50
-#     expect(x.discount_price).to eq 45
-#   end
-# end
