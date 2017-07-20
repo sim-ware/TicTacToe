@@ -2,18 +2,21 @@ require 'board'
 
 describe Board do
 
-  describe "::new" do
-    subject { Board.new }
-
-    it "creates a new Board" do
-      expect(subject).to be_instance_of(Board)
+  context "#initialize" do
+    it "initializes the board with a grid" do
+      expect { Board.new(grid: "grid") }.to_not raise_error
     end
-  end
 
-  describe "#build" do
-    it "constructs a 3x3 Grid" do
-      subject.build
-      expect(subject.grid). to eq [["_|_|_"], ["_|_|_"], ["_|_|_"]]
+    it "sets the grid with three rows by default" do
+      board = Board.new
+      expect(board.grid.length).to eq 3
+    end
+
+    it "creates three things in each row by default" do
+      board = Board.new
+      board.grid.each do |row|
+        expect(row.length).to eq 3
+      end
     end
   end
 
