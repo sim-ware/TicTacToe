@@ -1,5 +1,5 @@
+require './lib/cell'
+require './lib/player'
 require './lib/board'
 
-a = Board.new
-a.build
-a.show
+a = Board.new(grid: 3)
