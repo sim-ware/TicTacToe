@@ -43,17 +43,17 @@ describe Array do
     end
   end
 
-  # context "#none_empty?" do
-  #   it "returns true if none elements of the Array are empty" do
-  #     expect(["X", "O", "X"].none_empty?).to be true
-  #   end
-  #
-  #   it "returns false if all of the Array elements are full" do
-  #     expect(["not empty", 1, "full", Object.new, :a].none_empty?).to be false
-  #   end
-  #
-  #   it "returns false for an empty Array" do
-  #     expect([].none_empty?).to be false
-  #   end
-  # end
+  context "#none_empty?" do
+    it "returns true if none elements of the Array are empty" do
+      expect(["X", "O", "X"].none_empty?).to be true
+    end
+
+    it "returns false if some of the Array elements are full" do
+      expect(["X", "O", ""].none_empty?).to be false
+    end
+
+    it "returns false for an empty Array" do
+      expect(["", "", ""].none_empty?).to be false
+    end
+  end
 end

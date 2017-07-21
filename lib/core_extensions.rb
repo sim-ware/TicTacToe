@@ -12,6 +12,6 @@ class Array
   end
 
   def none_empty?
-    !any_empty
+    !(self.any? { |element| element.to_s.empty? })
   end
 end
