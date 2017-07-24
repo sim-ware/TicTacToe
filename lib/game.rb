@@ -9,4 +9,8 @@ class Game
   def switch_players
     @current_player, @other_player = @other_player, @current_player
   end
+
+  def solicit_move
+    "#{current_player.name}; Please Enter a no. between 1 & 9 to make your move"
+  end
 end

@@ -35,4 +35,13 @@ describe Game do
     end
   end
 
+  context "#solicit_move" do
+    it "asks the player to make a move" do
+      game = Game.new([simi, luna])
+      game.stub(:current_player) { simi }
+      expected = "Simi; Please Enter a no. between 1 & 9 to make your move"
+      expect(game.solicit_move).to eq expected
+    end
+  end
+
 end
