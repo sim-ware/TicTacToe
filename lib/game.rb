@@ -14,7 +14,7 @@ class Game
     "#{current_player.name}; Please Enter a no. between 1 & 9 to make your move"
   end
 
-  def get move(human_move = gets.chomp)
+  def get_move(human_move = gets.chomp)
     human_move_to_coordinate(human_move)
   end
 
