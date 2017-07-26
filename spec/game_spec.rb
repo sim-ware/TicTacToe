@@ -56,4 +56,20 @@ describe Game do
     end
   end
 
+  context "#game_over_message" do
+    it "returns '{current player name} won!' if board shows a winner" do
+      game = Game.new([simi, luna])
+      game.stub(:current_player) { simi }
+      game.board.stub(:game_over) { :winner }
+      expect(game.game_over_message).to eq "Simi won!"
+    end
+
+    it "returns 'The game ended in a tie' if board shows a draw" do
+      game = Game.new([simi, luna])
+      game.stub(:current_player) { simi }
+      game.board.stub(:game_over) { :draw }
+      expect(game.game_over_message).to eq "The game ended in a tie"
+    end
+  end
+
 end
