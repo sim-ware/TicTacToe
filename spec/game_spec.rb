@@ -44,4 +44,16 @@ describe Game do
     end
   end
 
+  context "#get_move" do
+    it "converts human_move of '1' to [0, 0]" do
+      game = Game.new([simi, luna])
+      expect(game.get_move("1")).to eq [0, 0]
+    end
+
+    it "converts human_move of '7' to [0, 2]" do
+      game = Game.new([simi, luna])
+      expect(game.get_move('7')).to eq [0, 2]
+    end
+  end
+
 end
